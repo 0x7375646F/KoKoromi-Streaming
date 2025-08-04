@@ -1,0 +1,7 @@
+docker run --name koro-db \
+  -e MYSQL_ROOT_PASSWORD=5EwTjqrV3oPYP1HFqEyP8xElnK70rvYu1cX72BfU3N2SrRE9h8 \
+  -e MYSQL_DATABASE=koro_backend \
+  -e MYSQL_USER=m4n3g3r \
+  -e MYSQL_PASSWORD=tw53Wk485KPBFc0vyaOFaTNkyBXRs29ToTSxzdxwDXlkDIx40v \
+  -p 3306:3306 \
+  -d mysql
