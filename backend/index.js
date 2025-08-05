@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 1337
 app.use(express.json());
 app.use(cors({
     credentials: true,
-    origin: ['http://localhost:5173','http://127.0.0.1:5173','http://192.168.1.66:5173','http://172.17.0.1:5173']
+    origin: ['http://localhost:5173','http://127.0.0.1:5173','http://192.168.1.66:5173','http://172.17.0.1:5173','http://192.168.122.46:5173']
 }))
 app.use('/api/auth',require('./routes/authRoute'));
 app.use('/api/users',require('./routes/userRoute'));
