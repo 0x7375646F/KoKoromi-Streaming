@@ -70,7 +70,7 @@ const WatchPage = () => {
     <div className="bg-backGround pt-14 max-w-screen-xl mx-auto py-2 md:px-2">
       <Helmet>
         <title>
-          Watch {id.split("-").slice(0, 2).join(" ")} Online, Free Anime
+          Watch {id.split("-").slice(0, 2).join(" ")} Online, Anime
           Streaming Online on Kokoromim Anime Website
         </title>
         <meta property="og:title" content="watch - Kokoromi" />

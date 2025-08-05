@@ -1,11 +1,10 @@
 import axios from 'axios';
-import config from '../config/config';
+import {API_BACKEND_URL} from '../config/config';
 
-const API_BASE = 'http://localhost:6969/api/admin';
-
+    
 // Create Axios instance
 const adminApi = axios.create({
-  baseURL: API_BASE,
+  baseURL: API_BACKEND_URL+'/admin',
   headers: {
     'Accept': '*/*',
     'Content-Type': 'application/json',

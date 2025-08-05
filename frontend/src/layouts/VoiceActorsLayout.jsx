@@ -1,6 +1,5 @@
 import React from "react";
 import { useApi } from "../services/useApi";
-import Heading from "../components/Heading";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa";

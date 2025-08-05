@@ -1,4 +1,5 @@
-import config from "../config/config";
+import {API_BACKEND_URL} from "../config/config";
+
 
 // Helper function to get auth headers
 const getAuthHeaders = () => {
@@ -13,7 +14,7 @@ const authService = {
   // Login user
   login: async (credentials) => {
     try {
-      const response = await fetch(`${config.authUrl}/auth/login`, {
+      const response = await fetch(`${API_BACKEND_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +38,7 @@ const authService = {
   // Register user
   register: async (userData) => {
     try {
-      const response = await fetch(`${config.authUrl}/auth/register`, {
+      const response = await fetch(`${API_BACKEND_URL}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +62,7 @@ const authService = {
   // Verify OTP
   verifyOTP: async (username, otp) => {
     try {
-      const response = await fetch(`${config.authUrl}/auth/verify`, {
+      const response = await fetch(`${API_BACKEND_URL}/auth/verify`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +86,7 @@ const authService = {
   // Reset password
   resetPassword: async (username, newPassword, otp) => {
     try {
-      const response = await fetch(`${config.authUrl}/auth/reset`, {
+      const response = await fetch(`${API_BACKEND_URL}/auth/reset`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -109,7 +110,7 @@ const authService = {
   // Logout user
   logout: async () => {
     try {
-      const response = await fetch(`${config.authUrl}/auth/logout`, {
+      const response = await fetch(`${API_BACKEND_URL}/auth/logout`, {
         method: "POST",
         headers: getAuthHeaders(),
       });
@@ -130,7 +131,7 @@ const authService = {
   // Check authentication status
   checkAuth: async () => {
     try {
-      const response = await fetch(`${config.authUrl}/users/me`, {
+      const response = await fetch(`${API_BACKEND_URL}/users/me`, {
         headers: getAuthHeaders(),
       });
 
@@ -150,7 +151,7 @@ const authService = {
   // Get user profile
   getProfile: async () => {
     try {
-      const response = await fetch(`${config.authUrl}/users/me`, {
+      const response = await fetch(`${API_BACKEND_URL}/users/me`, {
         headers: getAuthHeaders(),
       });
 
@@ -170,7 +171,7 @@ const authService = {
   // Update username
   updateUsername: async (newUsername) => {
     try {
-      const response = await fetch(`${config.authUrl}/users/username`, {
+      const response = await fetch(`${API_BACKEND_URL}/users/username`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         body: JSON.stringify({ username: newUsername }),
@@ -192,7 +193,7 @@ const authService = {
   // Update password
   updatePassword: async (currentPassword, newPassword) => {
     try {
-      const response = await fetch(`${config.authUrl}/users/password`, {
+      const response = await fetch(`${API_BACKEND_URL}/users/password`, {
         method: 'PUT',
         headers: getAuthHeaders(),
         body: JSON.stringify({ currentPassword, newPassword }),
@@ -214,7 +215,7 @@ const authService = {
   // Delete user account
   deleteAccount: async () => {
     try {
-      const response = await fetch(`${config.authUrl}/users/me`, {
+        const response = await fetch(`${API_BACKEND_URL}/users/me`, {
         method: 'DELETE',
         headers: getAuthHeaders(),
       });

@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API_BASE_URL = 'http://localhost:6969/api';
+import {API_BACKEND_URL} from '../config/config';
 
 /**
  * Create axios instance with auth token
@@ -8,7 +7,7 @@ const API_BASE_URL = 'http://localhost:6969/api';
 const createApiInstance = () => {
     const token = localStorage.getItem('authToken');
     return axios.create({
-        baseURL: API_BASE_URL,
+        baseURL: API_BACKEND_URL,
         headers: {
             'Content-Type': 'application/json',
             ...(token && { Authorization: `Bearer ${token}` })
