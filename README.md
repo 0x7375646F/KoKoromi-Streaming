@@ -28,6 +28,13 @@ Kokoromi is a full-stack web application for anime discovery, user interaction, 
   npm install
   npm start
   ```
+### 2. Anime Info Backend
+- Start the anime info backend:
+  ```bash
+  cd hianime-API-main
+  npm install
+  npm start
+  ```
 
 ### 2. Frontend
 - See [frontend/README.md](frontend/README.md) for setup and development instructions.
