@@ -7,7 +7,7 @@ Kokoromi is a full-stack web application for anime discovery, user interaction, 
 
 - `backend/` — Node.js/Express API (authentication, users, admin, comments)
 - `frontend/` — React app (UI, user flows, anime browsing)
-- `hianime-API-main` — Third party api for fetching anime details~
+- `hianime-API-main/` — Third party api for fetching anime details~
 
 ## Main Features
 - User registration, login, TOTP verification, password reset
